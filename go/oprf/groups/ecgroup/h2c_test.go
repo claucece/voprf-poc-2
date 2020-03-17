@@ -68,17 +68,39 @@ func TestHashToCurveP521(t *testing.T) {
 	}
 }
 
+func TestHashToCurve448(t *testing.T) {
+	curve := CreateCurve448(sha512.New(), utils.HKDFExtExp{})
+	dir, _ := os.Getwd()
+	fmt.Println(dir)
+	buf, err := ioutil.ReadFile("../../../../test-vectors/hash-to-curve/curve448-sha512-ell2-ro-.json")
+	if err != nil {
+		t.Fatal(err)
+	}
+	testVectors := hashToCurveTestVectors{}
+	err = json.Unmarshal(buf, &testVectors)
+	if err != nil {
+		t.Fatal(err)
+	}
+	err = performHashToCurve(curve, testVectors)
+	if err != nil {
+		t.Fatal(err)
+	}
+}
+
 // performHashToCurve performs full hash-to-curve for each of the test inputs
 // and checks against expected responses
-func performHashToCurve(curve GroupCurve, testVectors hashToCurveTestVectors) error {
+func performHashToCurve(curve GroupCurve, v hashToCurveTestVectors) error {
 	hasher, err := getH2CSuite(curve)
 	if err != nil {
 		return err
 	}
 	hasherMod := hasher.(hasher2point)
 	hasherMod.dst = []byte("QUUX-V01-CS02")
-	for _, v := range testVectors.Vectors {
-		R, err := hasherMod.Hash([]byte(v.Msg))
+	for i := range v.Vectors {
+		fmt.Printf("\n %s v \n", v.Vectors[i].Msg)
+		fmt.Printf("\n %v P \n", v.Vectors[i].P)
+		R, err := hasherMod.Hash([]byte(v.Vectors[i].Msg))
+		fmt.Printf("\n %x R \n", R.X)
 		if err != nil {
 			return err
 		}
@@ -90,22 +112,27 @@ func performHashToCurve(curve GroupCurve, testVectors hashToCurveTestVectors) er
 
 		// check test vectors
 		// remove prefix
-		x := strings.Replace(v.P.X, "0x", "", 1)
-		y := strings.Replace(v.P.Y, "0x", "", 1)
+		x := strings.Replace(v.Vectors[i].P.X, "0x", "", 1)
+		y := strings.Replace(v.Vectors[i].P.Y, "0x", "", 1)
 		expectedX, err := hex.DecodeString(x)
 		if err != nil {
 			return err
 		}
+		lal := new(big.Int)
+		lal.SetBytes(expectedX)
+		fmt.Printf("\n %d lol \n", lal)
+		fmt.Printf("\n %d RRR \n", R.X)
 		expectedY, err := hex.DecodeString(y)
 		if err != nil {
 			return err
 		}
+
 		chkR := Point{X: new(big.Int).SetBytes(expectedX), Y: new(big.Int).SetBytes(expectedY), pog: curve, compress: true}
 		if !R.Equal(chkR) {
-			fmt.Println(x)
-			fmt.Println(y)
-			fmt.Println(hex.EncodeToString(R.X.Bytes()))
-			fmt.Println(hex.EncodeToString(R.Y.Bytes()))
+			fmt.Printf("\n expected X in hex %x \n", x)
+			fmt.Printf("\n expected Y in hex %x \n", y)
+			fmt.Printf("\n X in hex %x \n", hex.EncodeToString(R.X.Bytes()))
+			fmt.Printf("\n Y in hex %x \n", hex.EncodeToString(R.Y.Bytes()))
 			return errors.New("Points are not equal")
 		}
 	}

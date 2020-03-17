@@ -2,7 +2,7 @@ package ecgroup
 
 import (
 	"github.com/alxdavids/voprf-poc/go/oerr"
-	h2c "github.com/armfazh/h2c-go-ref"
+	h2c "github.com/claucece/h2c-go-ref"
 )
 
 // HashToPoint produces a point by hashing the input message.
