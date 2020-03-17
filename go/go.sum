@@ -1,16 +1,10 @@
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/agl/ed25519 v0.0.0-20170116200512-5312a6153412 h1:w1UutsfOrms1J05zt7ISrnJIXKzwaspym5BTKGx93EI=
 github.com/agl/ed25519 v0.0.0-20170116200512-5312a6153412/go.mod h1:WPjqKcmVOxf0XSf3YxCJs6N6AOSrOx3obionmG7T0y0=
-github.com/armfazh/h2c-go-ref v0.0.0-20200129021002-7dd661fbab09 h1:dbeOnT4BD46K62Wq2M2qaJzRD23z9MpFAEJ2i4xBLFA=
-github.com/armfazh/h2c-go-ref v0.0.0-20200129021002-7dd661fbab09/go.mod h1:ovlWq/CllkrlsufhQEj4UnESVpnDNqgK1ZgHRmBcgdM=
-github.com/armfazh/h2c-go-ref v0.0.0-20200310081807-e22f1f36d302 h1:NHLio04mUq27HoQmUuHaBnFGTRrw3pLjZGcyMSOpt7A=
-github.com/armfazh/tozan-ecc v0.0.0-20200128002259-3fa3a558a3f8/go.mod h1:u25eZC5Z8uJFQxJxGBz1Blfii/7m3DfmwX0vFnwtG9I=
 github.com/armfazh/tozan-ecc v0.0.0-20200204225737-c3304615766b h1:hQde6c4IclpQnZQugu/HodsOqAZRpoTPHktL58keRQg=
 github.com/armfazh/tozan-ecc v0.0.0-20200204225737-c3304615766b/go.mod h1:u25eZC5Z8uJFQxJxGBz1Blfii/7m3DfmwX0vFnwtG9I=
 github.com/awnumar/memcall v0.0.0-20191004114545-73db50fd9f80/go.mod h1:S911igBPR9CThzd/hYQQmTc9SWNu3ZHIlCGaWsWsoJo=
 github.com/awnumar/memguard v0.21.0/go.mod h1:+ejY3DekvjnDWBXHwL5xB5p4Il77kDsrIz+UOUNrm2Q=
-github.com/claucece/h2c-go-ref v0.0.0-20200317073323-76e258adaefc h1:d18Q9HnJeQd0W+GlGgSRcsNDyHIQLJtMFgcGUJlHN1Q=
-github.com/claucece/h2c-go-ref v0.0.0-20200317073323-76e258adaefc/go.mod h1:3RnipSOdyUQWo9cU0vy0aJzBsHefKfd/oPJlsafaJrI=
 github.com/claucece/h2c-go-ref v0.0.0-20200317073834-4f459a82ba81 h1:gq1kmoS9pf1A33tLbRwVkr62rpClX+OJ1CNTsDfKk/k=
 github.com/claucece/h2c-go-ref v0.0.0-20200317073834-4f459a82ba81/go.mod h1:3RnipSOdyUQWo9cU0vy0aJzBsHefKfd/oPJlsafaJrI=
 github.com/cloudflare/circl v1.0.0 h1:64b6pyfCFbYm623ncIkYGNZaOcmIbyd+CjyMi2L9vdI=
@@ -25,8 +19,6 @@ github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORN
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
 github.com/kr/text v0.1.0 h1:45sCR5RtlFHMR4UwH9sdQ5TC8v0qDQCHnXt+kaKSTVE=
 github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
-github.com/otrv4/ed448 v0.0.0-20200127022154-15c7055d6946 h1:IPEgvhhkGfuJGRYtNVsKCXOqtcoJ6SUFFyUqAO6bLvg=
-github.com/otrv4/ed448 v0.0.0-20200127022154-15c7055d6946/go.mod h1:DjzKOYp/KeBguDPfGuSe0/h5+P5w6gHBpLlXyttsAjc=
 github.com/otrv4/ed448 v0.0.0-20200313043504-efc4accd8117 h1:0GyJjklJjP7t55vIjplyljtk1F+pQSAXhBNEM0njR68=
 github.com/otrv4/ed448 v0.0.0-20200313043504-efc4accd8117/go.mod h1:DjzKOYp/KeBguDPfGuSe0/h5+P5w6gHBpLlXyttsAjc=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
@@ -60,10 +52,6 @@ golang.org/x/sys v0.0.0-20190602015325-4c4f7f33c9ed/go.mod h1:h1NjWce9XRLGQEsW7w
 golang.org/x/sys v0.0.0-20191001151750-bb3f8db39f24/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20191127021746-63cb32ae39b2/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200117145432-59e60aa80a0c/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
-golang.org/x/sys v0.0.0-20200124204421-9fbb57f87de9 h1:1/DFK4b7JH8DmkqhUk48onnSfrPzImPoVxuomtbT2nk=
-golang.org/x/sys v0.0.0-20200124204421-9fbb57f87de9/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
-golang.org/x/sys v0.0.0-20200302150141-5c8b2ff67527 h1:uYVVQ9WP/Ds2ROhcaGPeIdVq0RIXVLwsHlnvJ+cT1So=
-golang.org/x/sys v0.0.0-20200302150141-5c8b2ff67527/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200316230553-a7d97aace0b0 h1:4Khi5GeNOkZS5DqSBRn4Sy7BE6GuxwOqARPqfurkdNk=
 golang.org/x/sys v0.0.0-20200316230553-a7d97aace0b0/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
