@@ -97,10 +97,7 @@ func performHashToCurve(curve GroupCurve, v hashToCurveTestVectors) error {
 	hasherMod := hasher.(hasher2point)
 	hasherMod.dst = []byte("QUUX-V01-CS02")
 	for i := range v.Vectors {
-		fmt.Printf("\n %s v \n", v.Vectors[i].Msg)
-		fmt.Printf("\n %v P \n", v.Vectors[i].P)
 		R, err := hasherMod.Hash([]byte(v.Vectors[i].Msg))
-		fmt.Printf("\n %x R \n", R.X)
 		if err != nil {
 			return err
 		}
@@ -118,10 +115,6 @@ func performHashToCurve(curve GroupCurve, v hashToCurveTestVectors) error {
 		if err != nil {
 			return err
 		}
-		lal := new(big.Int)
-		lal.SetBytes(expectedX)
-		fmt.Printf("\n %d lol \n", lal)
-		fmt.Printf("\n %d RRR \n", R.X)
 		expectedY, err := hex.DecodeString(y)
 		if err != nil {
 			return err

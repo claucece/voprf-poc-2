@@ -7,6 +7,8 @@ github.com/awnumar/memcall v0.0.0-20191004114545-73db50fd9f80/go.mod h1:S911igBP
 github.com/awnumar/memguard v0.21.0/go.mod h1:+ejY3DekvjnDWBXHwL5xB5p4Il77kDsrIz+UOUNrm2Q=
 github.com/claucece/h2c-go-ref v0.0.0-20200317073834-4f459a82ba81 h1:gq1kmoS9pf1A33tLbRwVkr62rpClX+OJ1CNTsDfKk/k=
 github.com/claucece/h2c-go-ref v0.0.0-20200317073834-4f459a82ba81/go.mod h1:3RnipSOdyUQWo9cU0vy0aJzBsHefKfd/oPJlsafaJrI=
+github.com/claucece/h2c-go-ref v0.0.0-20200317080006-f19142faca57 h1:5jyXup59UIbC7tm5VvVTuLrCo5jJ3Au2XRhT1KeIeE0=
+github.com/claucece/h2c-go-ref v0.0.0-20200317080006-f19142faca57/go.mod h1:bpfrlGe8/OUxh1ijqBWjFf7IwUCg7nTCTdkto0/VQ9M=
 github.com/cloudflare/circl v1.0.0 h1:64b6pyfCFbYm623ncIkYGNZaOcmIbyd+CjyMi2L9vdI=
 github.com/cloudflare/circl v1.0.0/go.mod h1:MhjB3NEEhJbTOdLLq964NIUisXDxaE1WkQPUxtgZXiY=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
